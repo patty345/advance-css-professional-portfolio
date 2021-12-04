@@ -19,3 +19,30 @@
   list-style: none;
   background-color: var(--header-footer-color);
 }
+.header h1 {
+  padding-left: 50px;
+}
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding-right: 0px;
+}
+
+.header nav ul li {
+  font-size: 1.8vw;
+  padding: 10px 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.header a {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--lightskyblue);
+  color: var(--lightskyblue);
+}
