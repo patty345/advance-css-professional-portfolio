@@ -3,27 +3,39 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Global variables */
+
+/* Global variable definitions */
 :root {
-  --header-footer-color: #404040;
+  --header-footer-background-color: #404040;
   --lightskyblue: lightskyblue;
   --lightgray: lightgray;
   --about-me-work-border: #333366;
-  --rgba-border-color: rgba(135, 206, 250, 0.8);
+  --rgba-border-color-opacity: rgba(135, 206, 250, 0.8);
 }
 
-.header {
-  display: flex;
+/* Start of Semantic code */
+
+/* Smoth Scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Start of Header code */
+header {
+  display: flex; /* Flex container to display the child elements as flex with space between and wrap */
   justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
-  background-color: var(--header-footer-color);
+  background-color: var(--header-footer-background-color);
 }
-.header h1 {
+
+header h1 {
+  /* At bigger screens create space at left of h1 on header */
   padding-left: 50px;
 }
-.header nav ul {
-  display: flex;
+
+header nav ul {
+  display: flex; /* Flex container to display the child elements as flex with flex-end, wrap, and align the items in center */
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
@@ -31,18 +43,323 @@
   padding-right: 0px;
 }
 
-.header nav ul li {
+header nav ul li {
+  /*Viewport font-size to help with the responsiveness of the web page */
   font-size: 1.8vw;
+  /* Align nave element to closely match the header h1 element*/
   padding: 10px 15px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-.header a {
+/* Remove text anchor default decoreations and apply specific styles individulally*/
+header a {
+  /* Longer bootom border under the element as mockup */
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
   text-decoration: none;
   border-bottom: 2px solid var(--lightskyblue);
   color: var(--lightskyblue);
+}
+/* End of header code */
+
+/* Start of body code */
+body {
+  background-color: var(
+    --lightgray
+  ); /* Apply background to all of the body of the page */
+  /* googleapis font family Karla */
+  font-family: "Martel", serif;
+}
+/* End of body code */
+
+/* Start of footer code */
+footer {
+  /* Apply background to all of the body of the page */
+  background-color: var(--header-footer-background-color);
+  color: var(--lightskyblue); /* Title color */
+}
+
+footer a {
+  text-decoration: none;
+  border-bottom: 2px solid var(--lightskyblue); /* Border bottom */
+  color: var(--lightskyblue); /* anchor text color */
+  font-size: 1.8vw; /* View port font-size to help with responsiveness */
+  font-weight: bold;
+}
+
+.nav-effects a:hover {
+  color: var(--lightskyblue);
+  font-weight: bold;
+  text-shadow: 0px 0px 20px var(--lightskyblue);
+}
+
+.work-grid-container div:hover {
+  /* Create the ilussion of a brighter image once hovered */
+  mix-blend-mode: color-burn;
+}
+
+.work-grid-container .work-item-project.ghost-item:hover {
+  /* On over ghost item it will not reveal it! */
+  opacity: 0;
+}
+
+.footer-container a:hover {
+  color: var(--lightskyblue);
+  /*REMOVED - Zoom in effect with font-size 1.5vw
+    Will revisit for next project iteration
+    font-size: 2vw;*/
+  font-weight: bold;
+  text-shadow: 0px 0px 20px var(--lightskyblue);
+}
+.hero {
+  /* Here section is a flex container */
+  height: 300px;
+  background-image: url("../images/Downtown-Houston.jpg");
+  border-bottom-left-radius: 30px 30px; /* border-radious bottom sides with bottom border changed also*/
+  border-bottom-right-radius: 30px 30px;
+  background-size: cover; /* Image will cover the background */
+  background-position: 100% 13%; /* Aligned the image to show the top of the tower*/
+  background-attachment: fixed; /* Image scrolls with the page */
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row; /* Row type rather than column type to showcase usage */
+  align-items: flex-end;
+}
+.hero-subtitle {
+  /* Styling to the subtitle the Hero container */
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+.hero-subtitle {
+  padding-right: 30px;
+}
+
+.about-me-wrapper {
+  /* Flex wrapper */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.about-me-grid-container {
+  /* CSS Grid */
+  width: 80%; /* Contain the grid to a maximum of 80% of the flex wrapper */
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr); /* Create a 4X4 grid with the first column smaller than the others 3 */
+  grid-template-rows: repeat(4, 1fr); /* 4 rows of equal size */
+  gap: 10px 10px; /* Gap on x and y grid */
+}
+
+.about-me-item.about-me-title {
+  /* Cell declarations for the title of the container */
+  padding-top: 0px;
+  font-size: 35px;
+  grid-row: 1 / span 4;
+  padding-right: 10px;
+  text-align: right;
+  border-right: 2px solid var(--about-me-work-border);
+}
+
+.about-me-item.p1 {
+  padding-left: 10px;
+  grid-column: 2 / span 3;
+  grid-row: 1 / span 2;
+}
+.about-me-item.p2 {
+  padding-left: 10px;
+  grid-column: 2 / span 3;
+  grid-row: 3 / span 2;
+}
+
+.work-wrapper {
+  /* Flex wrapper */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  margin-top: 50px;
+}
+.work-grid-container {
+  /* CSS Grid */
+  width: 80%;
+  display: grid;
+  /* Create a 4X8 grid. */
+  grid-template-columns: 1fr repeat(3, 2fr); /* Create a 4X4 grid with the first column smaller than the others 3 */
+  grid-template-rows: repeat(10, 1fr);
+  gap: 10px 10px; /* Gap on x and y grid */
+}
+
+.work-item.work-title {
+  padding-top: 10px;
+  font-size: 35px;
+  grid-row: 1 / span 9;
+  text-align: right;
+  padding-right: 10px;
+  border-right: 2px solid var(--about-me-work-border);
+}
+
+.work-item-project.challenge-1-refactor {
+  /* Grid cells with embedded images */
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 6;
+  background-image: url("../images/challeng-1-refactor-code-smaller.JPG");
+  background-size: cover; /* Allows the image to autosie to cover the container */
+  display: flex; /*Flex required to move the element as flex */
+  align-items: flex-end; /*Allow text to be at center of grid*/
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: 0.25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.run-buddy {
+  grid-column: 3 / span 1;
+  grid-row: 7 / span 3;
+  /*  background-image: url("../images/run-buddy-project.JPG"); */
+  background-size: cover;
+  display: flex; /*Flex required to move the element as flex */
+  align-items: flex-end; /*Allow text to be at center of grid*/
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: 0.25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.password-generator {
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 3;
+  /* Royalty free image */
+  /*  background-image: url("../images/password-generator.JPG"); */
+  background-size: cover;
+  /* Allow the background image to align */
+  display: flex; /*Flex required to move the element as flex */
+  align-items: flex-end; /*Allow text to be at center of grid*/
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: 0.25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.web-api-code-quiz {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 3;
+  /* Royalty free image */
+  /*  background-image: url("../images/web-api-code-quiz.JPG"); */
+  background-size: 300px 200px, cover;
+  display: flex; /*Flex required to move the element as flex */
+  align-items: flex-end; /*Allow text to be at center of grid*/
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: 0.25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.work-day-scheduler {
+  grid-column: 4 / span 1;
+  grid-row: 4 / span 3;
+  /* Royalty free image */
+  /*  background-image: url("../images/work-day-scheduler.JPG"); */
+  background-size: cover;
+  display: flex; /*Flex required to move the element as flex */
+  align-items: flex-end; /*Allow text to be at center of grid*/
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: 0.25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.project01-group07 {
+  grid-column: 4 / span 1;
+  grid-row: 7 / span 3;
+  /*  background-image: url("../images/project1-group07.JPG"); */
+  background-size: cover;
+  display: flex; /*Flex required to move the element as flex */
+  align-items: flex-end; /*Allow text to be at center of grid*/
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: 0.25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.ghost-item {
+  grid-column: 4 / span 1;
+  /* Hide Text */
+  opacity: 0;
+}
+
+.span-background {
+  /* Apply background to any span with this class name */
+  background-color: var(--lightskyblue);
+  position: relative;
+  line-height: 1.5;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5%;
+  opacity: 0.8;
+}
+
+.background-title {
+  background-color: var(--lightskyblue);
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.span-background {
+  opacity: 0.95; /* Note: 1 is 0 opacity and 0 is fully transparent */
+  font-size: 30px;
+}
+.span-background.lower-text {
+  font-size: x-small;
+}
+
+.footer-wrapper {
+  /* Flex container */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.footer-container {
+  /* CSS Grid */
+  width: 80%;
+  display: grid;
+  /*create a 4X3 grid. */
+  grid-template-columns: 1fr repeat(3, 2fr); /* Create a 4X4 grid with the first column smaller than the others 3 */
+  grid-template-rows: repeat(
+    3,
+    2fr
+  ); /* 3 rows of slighty biger size as a test */
+  gap: 20px 20px;
+}
+
+.footer-grid-item {
+  text-align: center;
+}
+.footer-grid-item.contact-me {
+  padding-top: 10px;
+  font-size: 35px;
+  grid-row: 1 / span 3;
+  text-align: right;
+  padding-right: 10px;
+  border-right: 2px solid var(--lightskyblue);
+}
+
+.footer-grid-item.phone {
+  /* Notice how all below are grid-row 2? CSS grid uses avaialble cells to allocate the element*/
+  grid-row: 2;
+}
+
+.footer-grid-item.email {
+  grid-row: 2;
+}
+
+.footer-grid-item.git-hub {
+  grid-row: 2;
 }

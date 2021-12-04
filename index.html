@@ -34,5 +34,157 @@
         <span class="span-background">Test!</span>
       </div>
     </section>
+
+    <article>
+      <div id="about-me" class="about-me-wrapper">
+        <!-- Id's coming from the header nav and a flex wrapper -->
+        <div class="about-me-grid-container">
+          <!-- About me containter is a grid container -->
+          <div class="about-me-item about-me-title">
+            <!-- Each item is a grid item -->
+            <p>About me</p>
+          </div>
+          <div class="about-me-item p1">
+            <p>
+              Achieving goals together means spending time doing what we love
+              with people we care about. My goal is to do what I love with
+              professionalism that will benefit us both in any future endeavors
+              we work on.
+            </p>
+          </div>
+          <div class="about-me-item p2">
+            <p>
+              I am currently working as an application support analyst at BMO
+              Capital markets. My job entails making sure that our production
+              environment runs smoothly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article>
+      <div id="work" class="work-wrapper">
+        <!-- Id's coming from the header nav and a flex wrapper -->
+        <div class="work-grid-container">
+          <!-- Work projects container is a grid container -->
+          <div class="work-item work-title">
+            <!-- Each item is a grid item -->
+            <p>Work</p>
+          </div>
+          <!-- Clickable grid link functionality achieved with a javascript function as anchor wrap did not work (tried) as intended for me -->
+          <!-- Alt, title (tooltip) and open in new tab functionality added-->
+          <!-- Each grid item has its own grid location achieved by creating one object/instance per class -->
+          <div
+            onclick="projectClicked('challenge-1-refactor')"
+            alt="Image Displaying the Horiseon landing Page"
+            title="Horiseon landing Page"
+            target="_blank"
+            style="cursor: pointer"
+            class="work-item-project challenge-1-refactor"
+          >
+            <span class="span-background">
+              <!-- Span added to contain h3, lower text and wrapped background -->
+              <h3>Horiseon Services</h3>
+              <span class="lower-text">HTML/CSS</span>
+              <!-- A small class to apply for all grid lower text -->
+            </span>
+          </div>
+          <!-- All grids below follow same patern as described above until this article container is finished -->
+          <div
+            onclick="projectClicked('run-buddy')"
+            alt="Image Displaying the RUN BUDDY landing Page"
+            title="RUN BUDDY landing page"
+            style="cursor: pointer"
+            class="work-item-project run-buddy"
+          >
+            <span class="span-background">
+              <h3>Run Buddy</h3>
+              <span class="lower-text">HTML/CSS</span>
+            </span>
+          </div>
+          <div
+            onclick="projectClicked('password-generator')"
+            alt="Image Displaying the Password Generator landing Page"
+            title="Password Generator landing page"
+            style="cursor: pointer"
+            class="work-item-project password-generator"
+          >
+            <span class="span-background">
+              <h3>Password Generator</h3>
+              <span class="lower-text">CSS/Javascript</span>
+            </span>
+          </div>
+          <div
+            onclick="projectClicked('web-api-code-quiz')"
+            alt="Image Displaying the Web Api Code Quiz landing Page"
+            title="Web Api Code Quiz landing page"
+            style="cursor: pointer"
+            class="work-item-project web-api-code-quiz"
+          >
+            <span class="span-background">
+              <h3>Web API Code Quiz</h3>
+              <span class="lower-text">Javascript/CSS/LocalStorage</span>
+            </span>
+          </div>
+          <div
+            onclick="projectClicked('work-day-scheduler')"
+            alt="Image Displaying the Web Api Code Quiz landing Page"
+            title="Web Api Code Quiz landing page"
+            style="cursor: pointer"
+            class="work-item-project work-day-scheduler"
+          >
+            <span class="span-background">
+              <h3>Work Day Scheduler</h3>
+              <span class="lower-text">Dynamic Javascript/Bootstrap</span>
+            </span>
+          </div>
+          <div
+            onclick="projectClicked('project01-group07')"
+            alt="Image Displaying the Project01 Group07 landing Page"
+            title="Project01 Group07 landing page"
+            style="cursor: pointer"
+            class="work-item-project project01-group07"
+          >
+            <span class="span-background">
+              <h3>Project01 Group07</h3>
+              <span class="lower-text">HTML/CSS/Javascript</span>
+            </span>
+          </div>
+
+          <div class="work-item-project ghost-item">
+            <span class="span-background">
+              <h3>Coming soon!</h3>
+              <span class="lower-text">TBD</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <div id="contact-me" class="footer-wrapper">
+        <!-- Id's coming from the header nav and a flex wrapper -->
+        <div class="footer-container">
+          <!-- footer container is a grid container -->
+          <!-- Each grid item has its own grid location achieved by creating one object/instance per class -->
+          <div class="footer-grid-item contact-me">
+            <!-- Each item is a grid item -->
+            Contact Me
+          </div>
+          <div class="footer-grid-item phone">
+            <a href="tel:832-525-3582" class="nav-effects">832-525-3582</a>
+          </div>
+          <div class="footer-grid-item email">
+            <a href="mailto:patricia.derieux15@outlook.com"
+              >patricia.derieux15@outlook.com</a
+            >
+          </div>
+          <div class="footer-grid-item git-hub">
+            <a href="https://github.com/patty345/" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
