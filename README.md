@@ -31,9 +31,11 @@ Small device experience
 ![Smaller Device](/assets/images/Small_Device.png)
 
 ## Installation
-Project was uploaded to [Github](https://github.com/) at the following repository:  hhttps://github.com/patty345/advance-css-professional-portfolio 
 
-You can find the deloyed application in Github pages link: https://patty345.github.io/advance-css-professional-portfolio/ 
+Project was uploaded to [Github](https://github.com/) at the following repository: https://github.com/patty345/advance-css-professional-portfolio
+
+You can find the deloyed application in Github pages link: https://patty345.github.io/advance-css-professional-portfolio/
 
 ## Output
-THe output of the challenge was to really emphazise HTML, CSS, and Advance CSS 
+
+THe output of the challenge was to really emphazise HTML, CSS, and Advance CSS
