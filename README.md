@@ -15,3 +15,13 @@ for future enhanchement. Used the skills that i have learned in the course of tw
   THEN I am taken to that deployed application.
 - WHEN I resize the page or view the site on various screens and devices
   THEN I am presented with a responsive layout that adapts to my viewport.
+
+## Landing Page
+
+![Landing Page](/assets/images/Professional_Portfolio.png)
+
+## Usage
+
+Use the navigation menu to visit different sections of the portfolio
+
+![Navigation](/assets/images/Navigation_image.png)
