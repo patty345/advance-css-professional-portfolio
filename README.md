@@ -25,3 +25,7 @@ for future enhanchement. Used the skills that i have learned in the course of tw
 Use the navigation menu to visit different sections of the portfolio
 
 ![Navigation](/assets/images/Navigation_image.png)
+
+Small device experience
+ ![Smaller Device](/assets/images/Small_Device.png)
+
