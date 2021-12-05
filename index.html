@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Patricia's Portfolio</title>
   </head>
   <body>
+    <!-- Header section start-->
     <header>
       <span class="background-title">
         <h1>Patricia Derieux</h1>
@@ -23,18 +25,32 @@
             <a href="#contact-me">Contact Me</a>
           </li>
           <li>
-            <a href="#resume">Resume</a>
+            <!-- Resume to open in a new window tab-->
+            <a
+              href="./assets/resume/Patricia_Derieux_Resume.pdf"
+              target="_blank"
+              >Resume</a
+            >
           </li>
         </ul>
       </nav>
     </header>
-
+    <!-- here image section start -->
     <section class="hero">
+      <div>
+        <img
+          src="./assets/images/ProfilePicture.jpg"
+          alt="Profile Picture of Patricia"
+        />
+      </div>
       <div class="hero-subtitle">
-        <span class="span-background">Test!</span>
+        <span class="span-background"
+          >“First, solve the problem. Then, write the code.” – John
+          Johnson</span
+        >
       </div>
     </section>
-
+    <!-- about me section start -->
     <article>
       <div id="about-me" class="about-me-wrapper">
         <!-- Id's coming from the header nav and a flex wrapper -->
@@ -46,17 +62,16 @@
           </div>
           <div class="about-me-item p1">
             <p>
-              Achieving goals together means spending time doing what we love
-              with people we care about. My goal is to do what I love with
-              professionalism that will benefit us both in any future endeavors
-              we work on.
+              My name is Patricia Derieux i am learining web development in
+              order to enhance my IT carrer, and expand my programming
+              knowledge.
             </p>
           </div>
           <div class="about-me-item p2">
             <p>
-              I am currently working as an application support analyst at BMO
-              Capital markets. My job entails making sure that our production
-              environment runs smoothly.
+              I am currently working as an application analyst at PerryHomes. My
+              job entails to create integrations with other services using Power
+              Automate (flows).
             </p>
           </div>
         </div>
@@ -72,9 +87,7 @@
             <!-- Each item is a grid item -->
             <p>Work</p>
           </div>
-          <!-- Clickable grid link functionality achieved with a javascript function as anchor wrap did not work (tried) as intended for me -->
-          <!-- Alt, title (tooltip) and open in new tab functionality added-->
-          <!-- Each grid item has its own grid location achieved by creating one object/instance per class -->
+
           <div
             onclick="projectClicked('challenge-1-refactor')"
             alt="Image Displaying the Horiseon landing Page"
@@ -104,51 +117,51 @@
             </span>
           </div>
           <div
-            onclick="projectClicked('password-generator')"
-            alt="Image Displaying the Password Generator landing Page"
-            title="Password Generator landing page"
+            onclick="projectClicked('robot-gladiators')"
+            alt="robot-gladiators game img"
+            title="Robot Gladiator Game"
             style="cursor: pointer"
-            class="work-item-project password-generator"
+            class="work-item-project robot-gladiators"
           >
             <span class="span-background">
-              <h3>Password Generator</h3>
+              <h3>Robot Gladiator</h3>
               <span class="lower-text">CSS/Javascript</span>
             </span>
           </div>
           <div
-            onclick="projectClicked('web-api-code-quiz')"
-            alt="Image Displaying the Web Api Code Quiz landing Page"
-            title="Web Api Code Quiz landing page"
+            onclick="projectClicked('comming-soon')"
+            alt="comming soon image"
+            title="Comming Soon"
             style="cursor: pointer"
-            class="work-item-project web-api-code-quiz"
+            class="work-item-project comming-soon"
           >
             <span class="span-background">
-              <h3>Web API Code Quiz</h3>
-              <span class="lower-text">Javascript/CSS/LocalStorage</span>
+              <h3>Coming Soon</h3>
+              <span class="lower-text">Placeholder</span>
             </span>
           </div>
           <div
-            onclick="projectClicked('work-day-scheduler')"
-            alt="Image Displaying the Web Api Code Quiz landing Page"
-            title="Web Api Code Quiz landing page"
+            onclick="projectClicked('comming-soon')"
+            alt="comming soon image"
+            title="Comming Soon"
             style="cursor: pointer"
-            class="work-item-project work-day-scheduler"
+            class="work-item-project comming-soon"
           >
             <span class="span-background">
-              <h3>Work Day Scheduler</h3>
-              <span class="lower-text">Dynamic Javascript/Bootstrap</span>
+              <h3>Comming Soon</h3>
+              <span class="lower-text">Placeholder</span>
             </span>
           </div>
           <div
-            onclick="projectClicked('project01-group07')"
-            alt="Image Displaying the Project01 Group07 landing Page"
-            title="Project01 Group07 landing page"
+            onclick="projectClicked('comming-soon')"
+            alt="comming soon image"
+            title="Comming Soon"
             style="cursor: pointer"
-            class="work-item-project project01-group07"
+            class="work-item-project comming-soon"
           >
             <span class="span-background">
-              <h3>Project01 Group07</h3>
-              <span class="lower-text">HTML/CSS/Javascript</span>
+              <h3>Comming Soon</h3>
+              <span class="lower-text">Placeholder</span>
             </span>
           </div>
 
@@ -186,5 +199,20 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function projectClicked(input) {
+        var input = input;
+        if (input == "challenge-1-refactor") {
+          window.open("https://patty345.github.io/Code_Refactore_PD/");
+        } else if (input == "run-buddy") {
+          window.open("https://patty345.github.io/run-buddy/");
+        } else if (input == "robot-gladiators") {
+          window.open("https://patty345.github.io/robot-gladiators/");
+        } else {
+          return true;
+        }
+      }
+    </script>
   </body>
 </html>

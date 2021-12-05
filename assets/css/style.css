@@ -46,7 +46,6 @@ header nav ul {
 header nav ul li {
   /*Viewport font-size to help with the responsiveness of the web page */
   font-size: 1.8vw;
-  /* Align nave element to closely match the header h1 element*/
   padding: 10px 15px;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -66,26 +65,21 @@ header a {
 
 /* Start of body code */
 body {
-  background-color: var(
-    --lightgray
-  ); /* Apply background to all of the body of the page */
-  /* googleapis font family Karla */
-  font-family: "Martel", serif;
+  background-color: var(--lightgray);
 }
 /* End of body code */
 
 /* Start of footer code */
 footer {
-  /* Apply background to all of the body of the page */
   background-color: var(--header-footer-background-color);
-  color: var(--lightskyblue); /* Title color */
+  color: var(--lightskyblue);
 }
 
 footer a {
   text-decoration: none;
   border-bottom: 2px solid var(--lightskyblue); /* Border bottom */
-  color: var(--lightskyblue); /* anchor text color */
-  font-size: 1.8vw; /* View port font-size to help with responsiveness */
+  color: var(--lightskyblue);
+  font-size: 1.8vw;
   font-weight: bold;
 }
 
@@ -117,16 +111,19 @@ footer a {
   /* Here section is a flex container */
   height: 300px;
   background-image: url("../images/Downtown-Houston.jpg");
-  border-bottom-left-radius: 30px 30px; /* border-radious bottom sides with bottom border changed also*/
+  border-bottom-left-radius: 30px 30px;
   border-bottom-right-radius: 30px 30px;
-  background-size: cover; /* Image will cover the background */
-  background-position: 100% 13%; /* Aligned the image to show the top of the tower*/
-  background-attachment: fixed; /* Image scrolls with the page */
+  background-size: cover;
+  background-position: 100% 13%;
+  background-attachment: fixed;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  flex-direction: row; /* Row type rather than column type to showcase usage */
+  flex-direction: row;
   align-items: flex-end;
+}
+.hero img {
+  height: 200px;
 }
 .hero-subtitle {
   /* Styling to the subtitle the Hero container */
@@ -151,9 +148,9 @@ footer a {
   /* CSS Grid */
   width: 80%; /* Contain the grid to a maximum of 80% of the flex wrapper */
   display: grid;
-  grid-template-columns: 1fr repeat(3, 2fr); /* Create a 4X4 grid with the first column smaller than the others 3 */
-  grid-template-rows: repeat(4, 1fr); /* 4 rows of equal size */
-  gap: 10px 10px; /* Gap on x and y grid */
+  grid-template-columns: 1fr repeat(3, 2fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px 10px;
 }
 
 .about-me-item.about-me-title {
@@ -190,9 +187,9 @@ footer a {
   width: 80%;
   display: grid;
   /* Create a 4X8 grid. */
-  grid-template-columns: 1fr repeat(3, 2fr); /* Create a 4X4 grid with the first column smaller than the others 3 */
+  grid-template-columns: 1fr repeat(3, 2fr);
   grid-template-rows: repeat(10, 1fr);
-  gap: 10px 10px; /* Gap on x and y grid */
+  gap: 10px 10px;
 }
 
 .work-item.work-title {
@@ -208,10 +205,10 @@ footer a {
   /* Grid cells with embedded images */
   grid-column: 2 / span 2;
   grid-row: 1 / span 6;
-  background-image: url("../images/challeng-1-refactor-code-smaller.JPG");
-  background-size: cover; /* Allows the image to autosie to cover the container */
-  display: flex; /*Flex required to move the element as flex */
-  align-items: flex-end; /*Allow text to be at center of grid*/
+  background-image: url("../images/Refactor_Challenge.png");
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
   padding-left: 0px;
   padding-bottom: 15px;
   text-align: left;
@@ -221,78 +218,71 @@ footer a {
 .work-item-project.run-buddy {
   grid-column: 3 / span 1;
   grid-row: 7 / span 3;
-  /*  background-image: url("../images/run-buddy-project.JPG"); */
+  background-image: url("../images/Runn_Buddy.png");
   background-size: cover;
-  display: flex; /*Flex required to move the element as flex */
-  align-items: flex-end; /*Allow text to be at center of grid*/
+  display: flex;
+  align-items: flex-end;
   padding-left: 0px;
   padding-bottom: 15px;
   text-align: left;
   border: 0.25vw solid var(--rgba-border-color-opacity);
 }
 
-.work-item-project.password-generator {
+.work-item-project.robot-gladiators {
   grid-column: 2 / span 1;
   grid-row: 7 / span 3;
-  /* Royalty free image */
-  /*  background-image: url("../images/password-generator.JPG"); */
+  background-image: url("../images/Robot_Gladiator_Game.png");
   background-size: cover;
-  /* Allow the background image to align */
-  display: flex; /*Flex required to move the element as flex */
-  align-items: flex-end; /*Allow text to be at center of grid*/
+  display: flex;
+  align-items: flex-end;
   padding-left: 0px;
   padding-bottom: 15px;
   text-align: left;
   border: 0.25vw solid var(--rgba-border-color-opacity);
 }
 
-.work-item-project.web-api-code-quiz {
-  grid-column: 4 / span 1;
-  grid-row: 1 / span 3;
-  /* Royalty free image */
-  /*  background-image: url("../images/web-api-code-quiz.JPG"); */
+.work-item-project.comming-soon {
+  grid-column: 3 / span 1;
+  grid-row: 7 / span 3;
+  background-image: url("../images/coming-soon.jpg");
   background-size: 300px 200px, cover;
-  display: flex; /*Flex required to move the element as flex */
-  align-items: flex-end; /*Allow text to be at center of grid*/
+  display: flex;
+  align-items: flex-end;
   padding-left: 0px;
   padding-bottom: 15px;
   text-align: left;
   border: 0.25vw solid var(--rgba-border-color-opacity);
 }
-
-.work-item-project.work-day-scheduler {
-  grid-column: 4 / span 1;
-  grid-row: 4 / span 3;
-  /* Royalty free image */
-  /*  background-image: url("../images/work-day-scheduler.JPG"); */
+.work-item-project.comming-soon {
+  grid-column: 3 / span 1;
+  grid-row: 7 / span 3;
+  background-image: url("../images/coming-soon.jpg");
   background-size: cover;
-  display: flex; /*Flex required to move the element as flex */
-  align-items: flex-end; /*Allow text to be at center of grid*/
+  display: flex;
+  align-items: flex-end;
   padding-left: 0px;
   padding-bottom: 15px;
   text-align: left;
   border: 0.25vw solid var(--rgba-border-color-opacity);
 }
 
-.work-item-project.project01-group07 {
+.work-item-project.comming-soon {
   grid-column: 4 / span 1;
   grid-row: 7 / span 3;
   /*  background-image: url("../images/project1-group07.JPG"); */
   background-size: cover;
-  display: flex; /*Flex required to move the element as flex */
-  align-items: flex-end; /*Allow text to be at center of grid*/
+  display: flex;
+  align-items: flex-end;
   padding-left: 0px;
   padding-bottom: 15px;
   text-align: left;
   border: 0.25vw solid var(--rgba-border-color-opacity);
 }
-
 .work-item-project.ghost-item {
   grid-column: 4 / span 1;
   /* Hide Text */
   opacity: 0;
 }
-
 .span-background {
   /* Apply background to any span with this class name */
   background-color: var(--lightskyblue);
