@@ -244,7 +244,7 @@ footer a {
 .work-item-project.comming-soon {
   grid-column: 3 / span 1;
   grid-row: 7 / span 3;
-  background-image: url("../images/coming-soon.jpg");
+  background-image: url("../images/Questions.png");
   background-size: 300px 200px, cover;
   display: flex;
   align-items: flex-end;
